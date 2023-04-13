@@ -6,19 +6,14 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.text.*;
 
 import java.io.IOException;
 
-public class HelloApplication extends Application implements EventHandler<ActionEvent> {
+public class Game extends Application implements EventHandler<ActionEvent> {
     @Override
     public void start(Stage stage) throws IOException {
-        Parent root = FXMLLoader.load(HelloApplication.class.getResource("instructions.fxml"));
+        Parent root = FXMLLoader.load(Game.class.getResource("instructions.fxml"));
         Scene scene = new Scene(root, 1200, 800);
         stage.setTitle("Monty Hall Game");
         stage.setScene(scene);
