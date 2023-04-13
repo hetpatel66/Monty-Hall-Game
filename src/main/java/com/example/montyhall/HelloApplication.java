@@ -8,10 +8,12 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 import java.io.IOException;
 
-public class HelloApplication extends Application {
+public class HelloApplication extends Application implements EventHandler<ActionEvent> {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
@@ -20,6 +22,11 @@ public class HelloApplication extends Application {
         stage.setScene(scene);
         stage.show();
     }
+
+    public void handle(ActionEvent event) {
+
+    }
+
 
     public static void main(String[] args) {
         launch();
