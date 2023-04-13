@@ -26,7 +26,7 @@ public class SceneController {
     public void switchToGameScene(ActionEvent event) throws IOException {
         root = FXMLLoader.load(Game.class.getResource("game.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
+        scene = new Scene(root,1200, 800);
         stage.setScene(scene);
         stage.show();
     }
