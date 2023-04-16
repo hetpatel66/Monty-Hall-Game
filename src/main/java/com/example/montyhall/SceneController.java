@@ -20,7 +20,7 @@ public class SceneController {
 
     @FXML
     protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to Monty Hall! ");
+        welcomeText.setText("Welcome to Java FX Application");
     }
 
     public void switchToGameScene(ActionEvent event) throws IOException {
