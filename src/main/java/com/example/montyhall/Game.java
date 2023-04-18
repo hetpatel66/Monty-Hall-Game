@@ -16,6 +16,7 @@ public class Game extends Application implements EventHandler<ActionEvent> {
         Parent root = FXMLLoader.load(Game.class.getResource("instructions.fxml"));
         Scene scene = new Scene(root, 1200, 800);
         stage.setTitle("Monty Hall Game");
+        stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
     }
