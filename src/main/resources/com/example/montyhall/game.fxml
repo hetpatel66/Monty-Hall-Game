@@ -4,10 +4,15 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.montyhall.SceneController">
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.montyhall.SceneController">
    <children>
       <ImageView fx:id="item2View" fitHeight="150.0" fitWidth="200.0" layoutX="474.0" layoutY="325.0" pickOnBounds="true" />
-      <ImageView fx:id="door2View" fitHeight="344.0" fitWidth="248.0" layoutX="476.0" layoutY="228.0" onMouseClicked="#openDoor" pickOnBounds="true">
+      <ImageView fx:id="door2View" fitHeight="344.0" fitWidth="248.0" layoutX="476.0" layoutY="228.0" onMouseClicked="#openDoor2" pickOnBounds="true">
+         <image>
+            <Image url="@closed_door.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="door1View" fitHeight="344.0" fitWidth="248.0" layoutX="120.0" layoutY="228.0" onMouseClicked="#openDoor1" pickOnBounds="true">
          <image>
             <Image url="@closed_door.png" />
          </image>
