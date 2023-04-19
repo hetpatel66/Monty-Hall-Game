@@ -23,7 +23,7 @@ public class Game extends Application implements EventHandler<ActionEvent> {
         //ImageView imageView = new ImageView(image);
         //imageView.setX(400);
         //imageView.setY(400);
-        //root.getChildrenUnmodifiable().add(imageView);
+        //root.getChildrenUnmodifiable().add(imageView);and second door item
 
         stage.setScene(scene);
         stage.show();
