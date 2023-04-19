@@ -6,6 +6,8 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -17,6 +19,12 @@ public class Game extends Application implements EventHandler<ActionEvent> {
         Scene scene = new Scene(root, 1200, 800);
         stage.setTitle("Monty Hall Game");
         stage.setResizable(false);
+        //Image image = new Image("file:/main/resources/com/example/montyhall/closed_door.png");
+        //ImageView imageView = new ImageView(image);
+        //imageView.setX(400);
+        //imageView.setY(400);
+        //root.getChildrenUnmodifiable().add(imageView);
+
         stage.setScene(scene);
         stage.show();
     }
@@ -24,7 +32,6 @@ public class Game extends Application implements EventHandler<ActionEvent> {
     public void handle(ActionEvent event) {
 
     }
-
 
 
     public static void main(String[] args) {
