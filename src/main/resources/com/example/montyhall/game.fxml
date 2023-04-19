@@ -10,6 +10,16 @@
          <image>
             <Image url="@goat.png" />
          </image></ImageView>
+      <ImageView fitHeight="130.0" fitWidth="180.0" layoutX="142.0" layoutY="325.0" pickOnBounds="true">
+         <image>
+            <Image url="@car.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="130.0" fitWidth="180.0" layoutX="855.0" layoutY="325.0" pickOnBounds="true">
+         <image>
+            <Image url="@goat.png" />
+         </image>
+      </ImageView>
       <ImageView fx:id="door2View" fitHeight="344.0" fitWidth="248.0" layoutX="476.0" layoutY="228.0" onMouseClicked="#openDoor2" pickOnBounds="true">
          <image>
             <Image url="@closed_door.png" />
