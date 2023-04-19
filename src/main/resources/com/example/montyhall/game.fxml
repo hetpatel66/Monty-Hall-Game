@@ -6,13 +6,21 @@
 
 <AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.montyhall.SceneController">
    <children>
-      <ImageView fx:id="item2View" fitHeight="150.0" fitWidth="200.0" layoutX="474.0" layoutY="325.0" pickOnBounds="true" />
+      <ImageView fx:id="item2View" fitHeight="130.0" fitWidth="180.0" layoutX="500.0" layoutY="325.0" pickOnBounds="true">
+         <image>
+            <Image url="@goat.png" />
+         </image></ImageView>
       <ImageView fx:id="door2View" fitHeight="344.0" fitWidth="248.0" layoutX="476.0" layoutY="228.0" onMouseClicked="#openDoor2" pickOnBounds="true">
          <image>
             <Image url="@closed_door.png" />
          </image>
       </ImageView>
       <ImageView fx:id="door1View" fitHeight="344.0" fitWidth="248.0" layoutX="120.0" layoutY="228.0" onMouseClicked="#openDoor1" pickOnBounds="true">
+         <image>
+            <Image url="@closed_door.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="door3View" fitHeight="344.0" fitWidth="248.0" layoutX="834.0" layoutY="228.0" onMouseClicked="#openDoor3" pickOnBounds="true">
          <image>
             <Image url="@closed_door.png" />
          </image>
