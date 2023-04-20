@@ -1,16 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="BOTTOM_CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.montyhall.SceneController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-    <Label fx:id="playText"/>
-    <Button text="Play" onAction="#switchToGameScene"/>
-</VBox>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.montyhall.SceneController">
+   <children>
+      <Button layoutX="556.0" layoutY="670.0" mnemonicParsing="false" onAction="#switchToGameScene" text="Play">
+         <font>
+            <Font size="20.0" />
+         </font></Button>
+      <Text layoutX="251.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to the Monty Hall Show!">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Text>
+      <Text layoutX="467.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="These are the Rules:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="207.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1.The game consists of three doors. Behind one of the doors is a car, and behind the other two doors are goats.">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="433.0" layoutY="331.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2.The player chooses one of the three doors.">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="180.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3.The game show host, who knows what's behind each door, then opens one of the other two doors to reveal a goat.">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="89.0" layoutY="421.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4.The game show host then gives the player the option to switch their choice to the other unopened door, or to stick with their original choice.">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="234.0" layoutY="466.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5.The player decides whether to stick with their original choice or switch to the other unopened door.">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="159.0" layoutY="513.0" strokeType="OUTSIDE" strokeWidth="0.0" text="6.The game show host opens the door that the player has chosen, and the player wins whatever prize is behind that door.">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="124.0" layoutY="559.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7.If the player chose the door with the car behind it, they win a car. If the player chose a door with a goat behind it, they win a goat.">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
