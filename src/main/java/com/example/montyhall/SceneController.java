@@ -18,7 +18,11 @@ public class SceneController {
     private Scene scene;
     private Parent root;
 
-    private int winDoor;
+    Random rand = new Random();
+    private int winDoor = rand.nextInt((3 - 1) + 1) + 1;
+    private boolean doorOne = false;
+    private boolean doorTwo = false;
+    private boolean doorThree = false;
 
     @FXML
     ImageView door1View;
@@ -43,8 +47,6 @@ public class SceneController {
         stage.setScene(scene);
         stage.show();
 
-        Random rand = new Random();
-        winDoor = rand.nextInt((3 - 1) + 1) + 1;
         if (winDoor == 1){
             item1View.setImage(car);
         }
@@ -57,27 +59,42 @@ public class SceneController {
     }
 
     public void pickDoor1(){
-        if (winDoor == 2){
+        if (winDoor == 2 && doorThree == false){
             door3View.setImage(openDoorImg);
+            doorThree = true;
+        }
+        else if (winDoor == 3 && doorTwo == false){
+            door2View.setImage(openDoorImg);
+            doorTwo = true;
         }
         else{
-            door2View.setImage(openDoorImg);
+            door1View.setImage(openDoorImg);
         }
     }
     public void pickDoor2(){
-        if (winDoor == 1){
+        if (winDoor == 3 && doorOne == false){
+            door1View.setImage(openDoorImg);
+            doorOne = true;
+        }
+        else if (winDoor == 1 && doorThree == false){
             door3View.setImage(openDoorImg);
+            doorThree = true;
         }
         else{
-            door1View.setImage(openDoorImg);
+            door2View.setImage(openDoorImg);
         }
     }
     public void pickDoor3(){
-        if (winDoor == 1){
+        if (winDoor == 1 && doorTwo == false){
             door2View.setImage(openDoorImg);
+            doorTwo = true;
+        }
+        else if (winDoor == 2 && doorOne == false){
+            door1View.setImage(openDoorImg);
+            doorOne = true;
         }
         else{
-            door1View.setImage(openDoorImg);
+            door3View.setImage(openDoorImg);
         }
     }
 
