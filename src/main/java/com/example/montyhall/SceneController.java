@@ -11,11 +11,14 @@ import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Random;
 
 public class SceneController {
     private Stage stage;
     private Scene scene;
     private Parent root;
+
+    private int winDoor;
 
     @FXML
     ImageView door1View;
@@ -28,10 +31,9 @@ public class SceneController {
     @FXML
     ImageView door3View;
     @FXML
-    //ImageView item3View;
+    ImageView item3View;
     Image openDoorImg = new Image(getClass().getResourceAsStream("open_door.png"));
-    Image goatImg = new Image(getClass().getResourceAsStream("goat.png"));
-    Image carImg = new Image(getClass().getResourceAsStream("car.png"));
+    Image car = new Image(getClass().getResourceAsStream("car.png"));
 
     public void switchToGameScene(ActionEvent event) throws IOException {
         root = FXMLLoader.load(Game.class.getResource("game.fxml"));
@@ -40,17 +42,43 @@ public class SceneController {
 
         stage.setScene(scene);
         stage.show();
+
+        Random rand = new Random();
+        winDoor = rand.nextInt((3 - 1) + 1) + 1;
+        if (winDoor == 1){
+            item1View.setImage(car);
+        }
+        else if (winDoor == 2){
+            item2View.setImage(car);
+        }
+        else{
+            item3View.setImage(car);
+        }
     }
 
-    public void openDoor1(){
-        door1View.setImage(openDoorImg);
+    public void pickDoor1(){
+        if (winDoor == 2){
+            door3View.setImage(openDoorImg);
+        }
+        else{
+            door2View.setImage(openDoorImg);
+        }
     }
-
-    public void openDoor2(){
-        door2View.setImage(openDoorImg);
+    public void pickDoor2(){
+        if (winDoor == 1){
+            door3View.setImage(openDoorImg);
+        }
+        else{
+            door1View.setImage(openDoorImg);
+        }
     }
-    public void openDoor3(){
-        door3View.setImage(openDoorImg);
+    public void pickDoor3(){
+        if (winDoor == 1){
+            door2View.setImage(openDoorImg);
+        }
+        else{
+            door1View.setImage(openDoorImg);
+        }
     }
 
 }

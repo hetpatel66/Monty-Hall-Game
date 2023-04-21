@@ -10,27 +10,27 @@
          <image>
             <Image url="@goat.png" />
          </image></ImageView>
-      <ImageView fitHeight="130.0" fitWidth="180.0" layoutX="142.0" layoutY="325.0" pickOnBounds="true">
-         <image>
-            <Image url="@car.png" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="130.0" fitWidth="180.0" layoutX="855.0" layoutY="325.0" pickOnBounds="true">
+      <ImageView fx:id="item1View" fitHeight="130.0" fitWidth="180.0" layoutX="142.0" layoutY="325.0" pickOnBounds="true">
          <image>
             <Image url="@goat.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="door2View" fitHeight="344.0" fitWidth="248.0" layoutX="476.0" layoutY="228.0" onMouseClicked="#openDoor2" pickOnBounds="true">
+      <ImageView fx:id="item3View" fitHeight="130.0" fitWidth="180.0" layoutX="855.0" layoutY="325.0" pickOnBounds="true">
+         <image>
+            <Image url="@goat.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="door2View" fitHeight="344.0" fitWidth="248.0" layoutX="476.0" layoutY="228.0" onMouseClicked="#pickDoor2" pickOnBounds="true">
          <image>
             <Image url="@closed_door.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="door1View" fitHeight="344.0" fitWidth="248.0" layoutX="120.0" layoutY="228.0" onMouseClicked="#openDoor1" pickOnBounds="true">
+      <ImageView fx:id="door1View" fitHeight="344.0" fitWidth="248.0" layoutX="120.0" layoutY="228.0" onMouseClicked="#pickDoor1" pickOnBounds="true">
          <image>
             <Image url="@closed_door.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="door3View" fitHeight="344.0" fitWidth="248.0" layoutX="834.0" layoutY="228.0" onMouseClicked="#openDoor3" pickOnBounds="true">
+      <ImageView fx:id="door3View" fitHeight="344.0" fitWidth="248.0" layoutX="834.0" layoutY="228.0" onMouseClicked="#pickDoor3" pickOnBounds="true">
          <image>
             <Image url="@closed_door.png" />
          </image>
